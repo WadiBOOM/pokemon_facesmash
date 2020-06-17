@@ -1,0 +1,26 @@
+<h1>Pokemons</h1>
+
+
+<h4>tous les pokemons</h4>
+
+
+<ul>
+  <% @pokemons.sample(10).each do |pokemon| %>
+    <li id="pokemon">
+      <%= pokemon.name %>
+    </li>
+  <% end %>
+</ul>
+
+<h$>les pokemons battle</h4>
+
+<ul>
+  <% @pokemons_to_rate.each do |pokemon| %>
+    <li id="pokemon">
+      <%= link_to root_path(pokemon), method: :update, remote: true do %>
+      <%= pokemon.name %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
