@@ -8,7 +8,7 @@
 
 
 # require 'JSON'
-require 'HTTP'
+require 'http'
 require 'open-uri'
 
 Pokemon.destroy_all
