@@ -12,7 +12,6 @@ class PokemonsController < ApplicationController
       @pokemon = Pokemon.find(params[:id])
       @pokemon.ranking += 151
       @pokemon.save!
-      # raise
       redirect_to root_path
     end
   end

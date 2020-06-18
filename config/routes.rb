@@ -3,15 +3,16 @@
 Rails.application.routes.draw do
   root to: 'pokemons#index'
 
-  get "pokemons/:id", to: "pokemons#show", as: :show
+  # get "pokemons/:id", to: "pokemons#show"
 
 
-  get "pokemons/:id/update", to: "pokemons#update", as: :update
+  # post "pokemons/:id/update", to: "pokemons#update"
+
+  resources :pokemons, only: [:show, :update]
 
   # resources :pokemons, only: [:show] do
   #   member do
-  #     put :update
-  #     get :show
+  #     get :update
   #   end
   # end
 end
