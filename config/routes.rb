@@ -3,6 +3,5 @@
 Rails.application.routes.draw do
   root to: 'pokemons#index'
 
-  resources :pokemons #, only: [:show, :update]
-
+  resources :pokemons, only: [:show, :update]
 end

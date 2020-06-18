@@ -17,7 +17,7 @@
 <ul>
   <% @pokemons_to_rate.each do |pokemon| %>
     <li id="pokemon">
-      <%= link_to root_path(pokemon), method: :update, remote: true do %>
+      <%= link_to pokemon_path(pokemon.id), method: :update  do %>
       <%= pokemon.name %>
       <% end %>
     </li>
