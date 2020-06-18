@@ -6,15 +6,15 @@ class PokemonsController < ApplicationController
   end
 
   def update
-    raise
-    @pokemon = Pokemon.find(params[:id])
-    @pokemon.ranking += 151
-  end
-
-  def update_ranking
-    raise
-    @pokemon = Pokemon.find(params[:id])
-    @pokemon.ranking += 151
+    if params[:id].blank?
+      raise
+    else
+      @pokemon = Pokemon.find(params[:id])
+      @pokemon.ranking += 151
+      @pokemon.save!
+      # raise
+      redirect_to root_path
+    end
   end
 
   def show
