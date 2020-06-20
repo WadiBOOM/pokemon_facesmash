@@ -3,6 +3,10 @@ class PokemonsController < ApplicationController
   def index
     @pokemons = Pokemon.order("ranking DESC").first(10)
     @pokemons_to_rate = @pokemons.sample(2)
+    PokemonChannel.broadcast_to(
+      @pokemons,
+      render_to_string(partial: "pokemon", locals: { pokemon: @pokemons.pokemon })
+      )
   end
 
   def update
