@@ -5,9 +5,9 @@
 
 
 <ul>
-  <% @pokemons.sample(10).each do |pokemon| %>
+  <% @pokemons.each_with_index do |pokemon, i| %>
     <li id="pokemon">
-      <%= pokemon.name %>
+      <%= i + 1 %> - <%= pokemon.name %> - points : <%= pokemon.ranking %> - (<%= link_to "fiche pokemon", pokemon_path(pokemon.id), method: :get %>)
     </li>
   <% end %>
 </ul>

@@ -1,7 +1,7 @@
 class PokemonsController < ApplicationController
 
   def index
-    @pokemons = Pokemon.all
+    @pokemons = Pokemon.order("ranking DESC").first(10)
     @pokemons_to_rate = @pokemons.sample(2)
   end
 
