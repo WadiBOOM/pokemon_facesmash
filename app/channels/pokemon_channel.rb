@@ -1,7 +1,7 @@
 class PokemonChannel < ApplicationCable::Channel
   def subscribed
-    pokemon = Pokemon.all
-    stream_for pokemon
+    pokemons = Pokemon.all
+    stream_for pokemons
   end
 
   def unsubscribed

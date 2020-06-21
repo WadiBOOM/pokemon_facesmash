@@ -3,14 +3,8 @@
 
 <h4>tous les pokemons</h4>
 
-<div id="pokemon">
-  <ul>
-    <% @pokemons.each_with_index do |pokemon, i| %>
-      <li>
-        <%= i + 1 %> - <%= render "pokemons/pokemon", pokemon: pokemon %>
-      </li>
-    <% end %>
-  </ul>
+<div id="pokemons-container">
+  <%= render "pokemons/pokemon"%>
 </div>
 
 <h4>les pokemons battle</h4>
