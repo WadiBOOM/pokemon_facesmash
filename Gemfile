@@ -28,6 +28,8 @@ gem 'faker'
 
 gem 'http'
 
+gem 'redis'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
