@@ -1,5 +1,8 @@
 <%= link_to "back to home", root_path  %>
 
 <h4>fiche du pokemons</h4>
+<div>
 
-<%= @pokemon.name %> - points : <%= @pokemon.ranking %>
+  <%= @pokemon.name %> - <span id="pokemon-points-container" data-pokemon-id="<%= @pokemon.id %>" ><%= render "pokemons/pokemon_points", pokemon: @pokemon %></span>
+
+</div>
