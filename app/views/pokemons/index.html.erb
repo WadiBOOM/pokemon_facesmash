@@ -9,12 +9,20 @@
 
 <h4>les pokemons battle</h4>
 
-<ul>
-  <% @pokemons_to_rate.each do |pokemon| %>
-    <li id="<%= pokemon.id %>">
-      <%= link_to pokemon_path(pokemon), method: :put, remote: true  do %>
-      <%= pokemon.name %>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <ul>
+      <% @pokemons_to_rate.each do |pokemon| %>
+        <div class="card rounded shadow m-5 col-4">
+              <li id="<%= pokemon.id %>">
+                <%= link_to pokemon_path(pokemon), method: :put, remote: true  do %>
+                  <%#= cl_image_tag pokemon.photo.key, height: 450, width: 450, crop: :fill  %>
+                  <%= pokemon.name  %>
+                <% end %>
+              </li>
+          </div>
       <% end %>
-    </li>
-  <% end %>
-</ul>
+    </ul>
+  </div>
+</div>
