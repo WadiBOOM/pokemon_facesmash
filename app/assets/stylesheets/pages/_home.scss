@@ -1,5 +1,25 @@
 // Specific CSS for your home-page
 
+body {
+    background: #F7F9FC;
+    color: #575F7D;
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: lighter;
+}
+
 li {
-  list-style: none
+  list-style: none;
+}
+
+.pokemon-title {
+  font-size: 32px
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }

@@ -12,17 +12,17 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <ul>
-      <% @pokemons_to_rate.each do |pokemon| %>
-        <div class="card rounded shadow m-5 col-4">
-              <li id="<%= pokemon.id %>">
-                <%= link_to pokemon_path(pokemon), method: :put, remote: true  do %>
-                  <%#= cl_image_tag pokemon.photo.key, height: 450, width: 450, crop: :fill  %>
-                  <%= pokemon.name  %>
-                <% end %>
-              </li>
-          </div>
-      <% end %>
-    </ul>
+    <% @pokemons_to_rate.each do |pokemon| %>
+      <div class="m-3-lg col-12 col-lg-4 " id="<%#= pokemon.id %>" >
+          <%= link_to pokemon_path(pokemon), method: :put, remote: true  do %>
+              <div class = "rounded border shadow-lg bg-white  text-center">
+                <%= cl_image_tag pokemon.photos[1].key, height: 350, width: 350, class: "p-2 img-responsive"%>
+              </div>
+              <div class = "text-center p-3 pokemon-title <%#= pokemon.types.to_a.first %>"  >
+                <%= pokemon.name.capitalize  %>
+              </div>
+          <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
