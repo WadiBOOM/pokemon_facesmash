@@ -13,7 +13,8 @@ li {
 }
 
 .pokemon-title {
-  font-size: 32px
+  font-size: 32px;
+  font-weight: bold
 }
 
 a {
@@ -22,4 +23,211 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+// card titles
+
+#electric {
+  color: yellow;
+  text-shadow: black 0px 0px 10px;
+}
+#bug {
+  color: olive;
+  text-shadow: black 0px 0px 1px;
+}
+#dark {
+  color: black;
+  text-shadow: black 0px 0px 1px;
+}
+#dragon {
+  color: blue;
+  text-shadow: black 0px 0px 1px;
+}
+#fairy {
+  color: pink;
+  // text-shadow: black 0px 0px 1px;
+}
+#fighting {
+  color: red;
+  text-shadow: black 0px 0px 1px;
+}
+#fire {
+  color: orange;
+  text-shadow: black 0px 0px 1px;
+}
+#flying {
+  color: blue;
+  text-shadow: black 0px 0px 1px;
+}
+#ghost {
+  color: purple;
+  text-shadow: black 0px 0px 10px;
+}
+#grass {
+  color: green;
+  text-shadow: black 0px 0px 1px;
+}
+#ground {
+  color: brown;
+  text-shadow: black 0px 0px 1px;
+}
+#ice {
+  color: teal;
+  text-shadow: black 0px 0px 1px;
+}
+#normal {
+  color: grey;
+  text-shadow: black 0px 0px 1px;
+}
+#psychic {
+  color: pink;
+  // text-shadow: black 0px 0px 1px;
+}
+#poison {
+  color: purple;
+  text-shadow: black 0px 0px 1px;
+}
+#rock {
+  color: grey;
+  text-shadow: black 0px 0px 1px;
+}
+#steel {
+  color: grey;
+  text-shadow: black 0px 0px 1px;
+}
+
+#water {
+  color: blue;
+  text-shadow: black 0px 0px 1px;
+}
+
+// card border
+
+#border-electric {
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: yellow;
+  background: #fcfdff
+  ;
+}
+#border-bug {
+    border-style: solid;
+  border-width: 1px;
+  border-color: olive;
+  background: #fcfdff
+  ;
+}
+#border-dark {
+    border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  background: #fcfdff
+  ;
+}
+#border-dragon {
+    border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  background: #fcfdff
+  ;
+}
+#border-fairy {
+    border-style: solid;
+  border-width: 1px;
+  border-color: pink;
+  background: #fcfdff
+}
+
+#border-fighting {
+    border-style: solid;
+  border-width: 1px;
+  border-color: red;
+  background: #fcfdff
+  ;
+}
+#border-fire {
+    border-style: solid;
+  border-width: 1px;
+  border-color: orange;
+  background: #fcfdff
+  ;
+}
+#border-flying {
+    border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  background: #fcfdff
+  ;
+}
+#border-ghost {
+    border-style: solid;
+  border-width: 1px;
+  border-color: purple;
+  background: #fcfdff
+  ;
+}
+#border-grass {
+    border-style: solid;
+  border-width: 1px;
+  border-color: green;
+  background: #fcfdff
+  ;
+}
+#border-ground {
+    border-style: solid;
+  border-width: 1px;
+  border-color: brown;
+  background: #fcfdff
+  ;
+}
+#border-ice {
+    border-style: solid;
+  border-width: 1px;
+  border-color: teal;
+  background: #fcfdff
+  ;
+}
+#border-normal {
+    border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  background: #fcfdff
+  ;
+}
+#border-psychic {
+    border-style: solid;
+  border-width: 1px;
+  border-color: pink;
+  background: #fcfdff
+  ;
+}
+#border-poison {
+    border-style: solid;
+  border-width: 1px;
+  border-color: purple;
+  background: #fcfdff
+  ;
+}
+#border-rock {
+    border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  background: #fcfdff
+  ;
+}
+#border-steel {
+    border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  background: #fcfdff
+  ;
+}
+
+#border-water {
+    border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  background: #fcfdff
+  ;
 }

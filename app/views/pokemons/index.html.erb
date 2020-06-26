@@ -7,22 +7,35 @@
   <%= render "pokemons/pokemon", pokemons: @pokemons %>
 </div>
 
-<h4>les pokemons battle</h4>
+<div class="container-fluid">
 
-
-<div class="container">
-  <div class="row justify-content-center">
-    <% @pokemons_to_rate.each do |pokemon| %>
-      <div class="m-3-lg col-12 col-lg-4 " id="<%#= pokemon.id %>" >
-          <%= link_to pokemon_path(pokemon), method: :put, remote: true  do %>
-              <div class = "rounded border shadow-lg bg-white  text-center">
-                <%= cl_image_tag pokemon.photos[1].key, height: 350, width: 350, class: "p-2 img-responsive"%>
-              </div>
-              <div class = "text-center p-3 pokemon-title <%#= pokemon.types.to_a.first %>"  >
-                <%= pokemon.name.capitalize  %>
-              </div>
-          <% end %>
+  <div class="container">
+    <div class="row justify-content-center ">
+      <div class="col-12 col-lg-6 m-3 mb-5">
+        <%= cl_image_tag("logo_dnlxrj", width: 0.4, crop: "scale") %>
       </div>
-    <% end %>
+    </div>
+    <div class="row justify-content-center m-3 ">
+      <p class = "text-center">Catch them All !!</p>
+    </div>
   </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <% @pokemons_to_rate.each do |pokemon| %>
+        <div class="m-3-lg col-12 col-lg-4 " id="<%#= pokemon.id %>" >
+            <%= link_to pokemon_path(pokemon), method: :put, remote: true  do %>
+                <div class = "rounded shadow-lg bg-white text-center" id = "border-<%= if pokemon.types.include?(",") then pokemon.types.split(",").first else pokemon.types end %>">
+                  <%= cl_image_tag pokemon.photos[1].key, height: 350, width: 350, class: "p-2 img-responsive"%>
+                </div>
+                <div class = "text-center p-3 pokemon-title" id = "<%= if pokemon.types.include?(",") then pokemon.types.split(",").first else pokemon.types end %>">
+                  <%= pokemon.name.capitalize %>
+                </div>
+            <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
 </div>
+
