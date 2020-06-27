@@ -1,12 +1,3 @@
-<h1>Pokemons</h1>
-
-
-<h4>tous les pokemons</h4>
-
-<div id="pokemons-container">
-  <%= render "pokemons/pokemon", pokemons: @pokemons %>
-</div>
-
 <div class="container-fluid">
 
   <div class="container">
@@ -15,27 +6,39 @@
         <%= cl_image_tag("logo_dnlxrj", width: 0.4, crop: "scale") %>
       </div>
     </div>
-    <div class="row justify-content-center m-3 ">
-      <p class = "text-center">Catch them All !!</p>
+    <div class="row justify-content-center m-3 mb-5 ">
+      <p class = "text-center"><h1>Gotta Catch 'Em All !!</h1></p>
     </div>
   </div>
 
   <div class="container">
     <div class="row justify-content-center">
       <% @pokemons_to_rate.each do |pokemon| %>
-        <div class="m-3-lg col-12 col-lg-4 " id="<%#= pokemon.id %>" >
+        <div class="m-3-lg col-12 col-lg-4 " id="" >
             <%= link_to pokemon_path(pokemon), method: :put, remote: true  do %>
-                <div class = "rounded shadow-lg bg-white text-center" id = "border-<%= if pokemon.types.include?(",") then pokemon.types.split(",").first else pokemon.types end %>">
+                <div class = "rounded shadow-lg text-center" id = "border-<%= if pokemon.types.include?(",") then pokemon.types.split(",").first else pokemon.types end %>" >
                   <%= cl_image_tag pokemon.photos[1].key, height: 350, width: 350, class: "p-2 img-responsive"%>
                 </div>
-                <div class = "text-center p-3 pokemon-title" id = "<%= if pokemon.types.include?(",") then pokemon.types.split(",").first else pokemon.types end %>">
+                <div class = "text-center p-3 pokemon-title" id = "<%= if pokemon.types.include?(",") then pokemon.types.split(",").first else pokemon.types end %>" >
                   <%= pokemon.name.capitalize %>
                 </div>
             <% end %>
         </div>
       <% end %>
     </div>
+      <div class="row justify-content-center m-3 ">
+        <div class = "list-pokemon m-5 p-2 pl-5 pr-5 shadow">Ranking 👑</div>
+      </div>
   </div>
 
 </div>
 
+<div class="sidenav">
+  <div class="sidenav-left-part">
+  </div>
+  <div class="sidenav-right-part">
+    <div id="pokemons-container">
+      <%= render "pokemons/pokemon", pokemons: @pokemons %>
+    </div>
+  </div>
+</div>

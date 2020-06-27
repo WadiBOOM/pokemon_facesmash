@@ -6,3 +6,30 @@
   <%= @pokemon.name %> - <span id="pokemon-points-container" data-pokemon-id="<%= @pokemon.id %>" ><%= render "pokemons/pokemon_points", pokemon: @pokemon %></span>
 
 </div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="m-3-lg col-12 col-lg-4 " id="" >
+
+          <div class = "rounded shadow-lg bg-white text-center">
+            <%= cl_image_tag @pokemon.photos[1].key, height: 350, width: 350, class: "p-2 img-responsive"%>
+          </div>
+
+          <div class = "">
+          </div>
+
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="m-3-lg col-12 col-lg-4 " id="" >
+
+          <div class = "rounded shadow-lg bg-white text-center">
+            <%= cl_image_tag @pokemon.photos[1].key, height: 350, width: 350, class: "p-2 img-responsive"%>
+          </div>
+
+          <div class = "">
+          </div>
+
+        </div>
+    </div>
+</div>

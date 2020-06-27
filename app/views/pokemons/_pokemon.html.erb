@@ -1,9 +1,22 @@
-<div class="pokemon">
-  <ul>
-    <% pokemons.each_with_index do |pokemon, i| %>
-      <li>
-        <%= i + 1 %> - <%= pokemon.name %> - points : <%= pokemon.ranking %> - (<%= link_to "fiche pokemon", pokemon_path(pokemon.id), method: :get %>)
-      </li>
-    <% end %>
-  </ul>
+<div class= "">
+  <div class="pokemon">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Pokemon</th>
+          <th scope="col">Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% pokemons.each_with_index do |pokemon, i| %>
+          <tr>
+            <th scope="row"><%= i + 1 %></th>
+            <td><%= link_to pokemon_path(pokemon.id), method: :get do %><%= cl_image_tag pokemon.photos[0].key, height: 30, width: 30%><span class = "poke-c-font" id = "<%= if pokemon.types.include?(",") then pokemon.types.split(",").first else pokemon.types end %>"><%= pokemon.name.capitalize %></span><% end %></td>
+            <td><%= pokemon.ranking %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>

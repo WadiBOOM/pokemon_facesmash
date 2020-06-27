@@ -28,10 +28,11 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initPokemonCable } from '../channels/pokemon_channel.js';
-
+import { sideNavFunction } from '../components/side-nav.js';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initPokemonCable();
+  sideNavFunction();
 });
