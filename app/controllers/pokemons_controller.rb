@@ -1,12 +1,9 @@
 class PokemonsController < ApplicationController
 
   def index
-    @pokemons = Pokemon.order("ranking DESC").first(10)
+    @pokemons = Pokemon.order("ranking DESC")
     @pokemons_to_rate = @pokemons.sample(2)
-    # PokemonChannel.broadcast_to(
-    #   @pokemons,
-    #   render_to_string(partial: "pokemon", locals: { message: @message })
-    #   )
+
   end
 
   def update
@@ -31,6 +28,8 @@ class PokemonsController < ApplicationController
 
   def show
     @pokemon = Pokemon.find(params[:id])
+    @pokemon_stats = "#{@pokemon.hp},#{@pokemon.speed},#{@pokemon.attack},#{@pokemon.defense},#{@pokemon.special_attack},#{@pokemon.special_defense}"
+
   end
 
 end
